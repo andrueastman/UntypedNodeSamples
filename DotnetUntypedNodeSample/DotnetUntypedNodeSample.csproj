@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PublishAot>true</PublishAot>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="kiota-abstractions-dotnet\**" />
+    <Compile Remove="kiota-http-dotnet\**" />
+    <Compile Remove="kiota-serialization-form-dotnet\**" />
+    <Compile Remove="kiota-serialization-json-dotnet\**" />
+    <Compile Remove="kiota-serialization-multipart-dotnet\**" />
+    <Compile Remove="kiota-serialization-text-dotnet\**" />
+    <EmbeddedResource Remove="kiota-abstractions-dotnet\**" />
+    <EmbeddedResource Remove="kiota-http-dotnet\**" />
+    <EmbeddedResource Remove="kiota-serialization-form-dotnet\**" />
+    <EmbeddedResource Remove="kiota-serialization-json-dotnet\**" />
+    <EmbeddedResource Remove="kiota-serialization-multipart-dotnet\**" />
+    <EmbeddedResource Remove="kiota-serialization-text-dotnet\**" />
+    <None Remove="kiota-abstractions-dotnet\**" />
+    <None Remove="kiota-http-dotnet\**" />
+    <None Remove="kiota-serialization-form-dotnet\**" />
+    <None Remove="kiota-serialization-json-dotnet\**" />
+    <None Remove="kiota-serialization-multipart-dotnet\**" />
+    <None Remove="kiota-serialization-text-dotnet\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="kiota-abstractions-dotnet\src\Microsoft.Kiota.Abstractions.csproj" />
+    <ProjectReference Include="kiota-http-dotnet\src\Microsoft.Kiota.Http.HttpClientLibrary.csproj" />
+    <ProjectReference Include="kiota-serialization-form-dotnet\src\Microsoft.Kiota.Serialization.Form.csproj" />
+    <ProjectReference Include="kiota-serialization-json-dotnet\src\Microsoft.Kiota.Serialization.Json.csproj" />
+    <ProjectReference Include="kiota-serialization-multipart-dotnet\src\Microsoft.Kiota.Serialization.Multipart.csproj" />
+    <ProjectReference Include="kiota-serialization-text-dotnet\src\Microsoft.Kiota.Serialization.Text.csproj" />
+  </ItemGroup>
+
+</Project>

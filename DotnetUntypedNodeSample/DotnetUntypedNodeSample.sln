@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34601.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetUntypedNodeSample", "DotnetUntypedNodeSample.csproj", "{6CAD47A2-88E0-43F4-B9EB-D357D98664F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Kiota.Abstractions", "kiota-abstractions-dotnet\src\Microsoft.Kiota.Abstractions.csproj", "{FFC84727-3D3E-4DEE-9F5C-B9F5F7E6690C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Kiota.Serialization.Form", "kiota-serialization-form-dotnet\src\Microsoft.Kiota.Serialization.Form.csproj", "{9E07D14A-A122-49D4-9EF7-E74043B3F6EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Kiota.Serialization.Json", "kiota-serialization-json-dotnet\src\Microsoft.Kiota.Serialization.Json.csproj", "{93C4E297-A8A3-42FF-97CA-7D454C09600C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Kiota.Serialization.Text", "kiota-serialization-text-dotnet\src\Microsoft.Kiota.Serialization.Text.csproj", "{D359CDD1-BE2C-4392-874A-347C5212B784}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Kiota.Serialization.Multipart", "kiota-serialization-multipart-dotnet\src\Microsoft.Kiota.Serialization.Multipart.csproj", "{500E5C3F-39E4-46A1-A02B-0B835FC25D7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Kiota.Http.HttpClientLibrary", "kiota-http-dotnet\src\Microsoft.Kiota.Http.HttpClientLibrary.csproj", "{519A01F2-340C-4DC5-96B8-84BC402F0300}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KiotaGenerated", "kiota-http-dotnet\Kiota.Generated\KiotaGenerated.csproj", "{7C9DCE63-7D7E-4743-96B7-028B4C233256}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CAD47A2-88E0-43F4-B9EB-D357D98664F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CAD47A2-88E0-43F4-B9EB-D357D98664F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CAD47A2-88E0-43F4-B9EB-D357D98664F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CAD47A2-88E0-43F4-B9EB-D357D98664F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC84727-3D3E-4DEE-9F5C-B9F5F7E6690C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC84727-3D3E-4DEE-9F5C-B9F5F7E6690C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC84727-3D3E-4DEE-9F5C-B9F5F7E6690C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC84727-3D3E-4DEE-9F5C-B9F5F7E6690C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E07D14A-A122-49D4-9EF7-E74043B3F6EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E07D14A-A122-49D4-9EF7-E74043B3F6EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E07D14A-A122-49D4-9EF7-E74043B3F6EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E07D14A-A122-49D4-9EF7-E74043B3F6EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93C4E297-A8A3-42FF-97CA-7D454C09600C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93C4E297-A8A3-42FF-97CA-7D454C09600C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93C4E297-A8A3-42FF-97CA-7D454C09600C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93C4E297-A8A3-42FF-97CA-7D454C09600C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D359CDD1-BE2C-4392-874A-347C5212B784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D359CDD1-BE2C-4392-874A-347C5212B784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D359CDD1-BE2C-4392-874A-347C5212B784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D359CDD1-BE2C-4392-874A-347C5212B784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{500E5C3F-39E4-46A1-A02B-0B835FC25D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500E5C3F-39E4-46A1-A02B-0B835FC25D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500E5C3F-39E4-46A1-A02B-0B835FC25D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500E5C3F-39E4-46A1-A02B-0B835FC25D7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{519A01F2-340C-4DC5-96B8-84BC402F0300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{519A01F2-340C-4DC5-96B8-84BC402F0300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{519A01F2-340C-4DC5-96B8-84BC402F0300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{519A01F2-340C-4DC5-96B8-84BC402F0300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C9DCE63-7D7E-4743-96B7-028B4C233256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C9DCE63-7D7E-4743-96B7-028B4C233256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C9DCE63-7D7E-4743-96B7-028B4C233256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C9DCE63-7D7E-4743-96B7-028B4C233256}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17447388-BAEB-468B-A5A7-5FC366FD5466}
+	EndGlobalSection
+EndGlobal

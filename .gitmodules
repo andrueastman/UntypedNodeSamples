@@ -1,0 +1,18 @@
+[submodule "DotnetUntypedNodeSample/kiota-abstractions-dotnet"]
+	path = DotnetUntypedNodeSample/kiota-abstractions-dotnet
+	url = https://github.com/microsoft/kiota-abstractions-dotnet.git
+[submodule "DotnetUntypedNodeSample/kiota-serialization-json-dotnet"]
+	path = DotnetUntypedNodeSample/kiota-serialization-json-dotnet
+	url = https://github.com/microsoft/kiota-serialization-json-dotnet
+[submodule "DotnetUntypedNodeSample/kiota-serialization-form-dotnet"]
+	path = DotnetUntypedNodeSample/kiota-serialization-form-dotnet
+	url = https://github.com/microsoft/kiota-serialization-form-dotnet
+[submodule "DotnetUntypedNodeSample/kiota-serialization-text-dotnet"]
+	path = DotnetUntypedNodeSample/kiota-serialization-text-dotnet
+	url = https://github.com/microsoft/kiota-serialization-text-dotnet
+[submodule "DotnetUntypedNodeSample/kiota-serialization-multipart-dotnet"]
+	path = DotnetUntypedNodeSample/kiota-serialization-multipart-dotnet
+	url = https://github.com/microsoft/kiota-serialization-multipart-dotnet
+[submodule "DotnetUntypedNodeSample/kiota-http-dotnet"]
+	path = DotnetUntypedNodeSample/kiota-http-dotnet
+	url = https://github.com/microsoft/kiota-http-dotnet.git
