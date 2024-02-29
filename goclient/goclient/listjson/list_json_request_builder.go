@@ -3,7 +3,7 @@ package listjson
 import (
     "context"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-    iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2 "github.com/andrueastman/untypednodesamples/goclient/models"
+    id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629 "github.com/andrueastman/untypednodesamples/goclient/goclient/models"
 )
 
 // ListJsonRequestBuilder builds and executes requests for operations under \list.json
@@ -32,19 +32,19 @@ func NewListJsonRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee26337
 }
 // Get list all APIs in the directory.Returns links to the OpenAPI definitions for each API in the directory.If API exist in multiple versions `preferred` one is explicitly marked.Some basic info from the OpenAPI definition is cached inside each object.This allows you to generate some simple views without needing to fetch the OpenAPI definition for each API.
 // returns a APIsable when successful
-func (m *ListJsonRequestBuilder) Get(ctx context.Context, requestConfiguration *ListJsonRequestBuilderGetRequestConfiguration)(iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2.APIsable, error) {
+func (m *ListJsonRequestBuilder) Get(ctx context.Context, requestConfiguration *ListJsonRequestBuilderGetRequestConfiguration)(id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629.APIsable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
         return nil, err
     }
-    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2.CreateAPIsFromDiscriminatorValue, nil)
+    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629.CreateAPIsFromDiscriminatorValue, nil)
     if err != nil {
         return nil, err
     }
     if res == nil {
         return nil, nil
     }
-    return res.(iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2.APIsable), nil
+    return res.(id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629.APIsable), nil
 }
 // ToGetRequestInformation list all APIs in the directory.Returns links to the OpenAPI definitions for each API in the directory.If API exist in multiple versions `preferred` one is explicitly marked.Some basic info from the OpenAPI definition is cached inside each object.This allows you to generate some simple views without needing to fetch the OpenAPI definition for each API.
 // returns a *RequestInformation when successful

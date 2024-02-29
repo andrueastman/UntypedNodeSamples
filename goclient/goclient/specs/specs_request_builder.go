@@ -8,7 +8,7 @@ import (
 type SpecsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ByProvider gets an item from the github.com/andrueastman/UntypedNodeSamples/GoClient/.specs.item collection
+// ByProvider gets an item from the github.com/andrueastman/UntypedNodeSamples/GoClient/GoClient.specs.item collection
 // returns a *WithProviderItemRequestBuilder when successful
 func (m *SpecsRequestBuilder) ByProvider(provider string)(*WithProviderItemRequestBuilder) {
     urlTplParams := make(map[string]string)

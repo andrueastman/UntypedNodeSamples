@@ -3,7 +3,7 @@ package specs
 import (
     "context"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-    iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2 "github.com/andrueastman/untypednodesamples/goclient/models"
+    id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629 "github.com/andrueastman/untypednodesamples/goclient/goclient/models"
 )
 
 // ItemItemWithApiJsonItemRequestBuilder builds and executes requests for operations under \specs\{provider}\{apiJson-id}\{api}.json
@@ -32,19 +32,19 @@ func NewItemItemWithApiJsonItemRequestBuilder(rawUrl string, requestAdapter i2ae
 }
 // Get returns the API entry for one specific version of an API where there is a serviceName.
 // returns a APIable when successful
-func (m *ItemItemWithApiJsonItemRequestBuilder) Get(ctx context.Context, requestConfiguration *ItemItemWithApiJsonItemRequestBuilderGetRequestConfiguration)(iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2.APIable, error) {
+func (m *ItemItemWithApiJsonItemRequestBuilder) Get(ctx context.Context, requestConfiguration *ItemItemWithApiJsonItemRequestBuilderGetRequestConfiguration)(id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629.APIable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
         return nil, err
     }
-    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2.CreateAPIFromDiscriminatorValue, nil)
+    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629.CreateAPIFromDiscriminatorValue, nil)
     if err != nil {
         return nil, err
     }
     if res == nil {
         return nil, nil
     }
-    return res.(iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2.APIable), nil
+    return res.(id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629.APIable), nil
 }
 // ToGetRequestInformation returns the API entry for one specific version of an API where there is a serviceName.
 // returns a *RequestInformation when successful

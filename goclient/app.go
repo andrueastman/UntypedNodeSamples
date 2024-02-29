@@ -1,50 +1,64 @@
-package goclient
+package main
 
 import (
 	"context"
 	"fmt"
 
-	azidentity "github.com/Azure/azure-sdk-for-go/sdk/azidentity"
-	a "github.com/microsoft/kiota-authentication-azure-go"
+	client "github.com/andrueastman/untypednodesamples/goclient/goclient"
+	auth "github.com/microsoft/kiota-abstractions-go/authentication"
+	absser "github.com/microsoft/kiota-abstractions-go/serialization"
 	r "github.com/microsoft/kiota-http-go"
-	u "github.com/microsoft/kiota-samples/msgraph-mail/go/utilities"
 )
 
 func main() {
-	cred, err := azidentity.NewDeviceCodeCredential(&azidentity.DeviceCodeCredentialOptions{
-		TenantID: "09988f3c-947e-4986-a87e-37ad49a3b175",
-		ClientID: "f19e2a30-d500-4fa7-8582-bd6099088b37",
-		UserPrompt: func(ctx context.Context, message azidentity.DeviceCodeMessage) error {
-			fmt.Println(message.Message)
-			return nil
-		},
-	})
-	if err != nil {
-		fmt.Printf("Error creating credentials: %v\n", err)
-	}
-	auth, err := a.NewAzureIdentityAuthenticationProviderWithScopes(cred, []string{"Mail.Read", "Mail.Send"})
-	if err != nil {
-		fmt.Printf("Error authentication provider: %v\n", err)
-		return
-	}
-	adapter, err := r.NewNetHttpRequestAdapter(auth)
+	authprovider := &auth.AnonymousAuthenticationProvider{}
+	adapter, err := r.NewNetHttpRequestAdapter(authprovider)
 	if err != nil {
 		fmt.Printf("Error creating adapter: %v\n", err)
 		return
 	}
-	client := u.NewApiClient(adapter)
-	urb := client.Users().ByUserId("vincent@biret365.onmicrosoft.com")
-	fmt.Printf("urb %v\n", urb)
-	response, err := client.Users().ByUserId("vincent@biret365.onmicrosoft.com").Messages().Get(context.Background(), nil)
+	client := client.NewApiClient(adapter)
+	response, err := client.MetricsJson().Get(context.Background(), nil)
 	if err != nil {
 		fmt.Printf("Error getting messages: %v\n", err)
 		return
 	}
-	for _, message := range response.GetValue() {
-		fmt.Printf("Message: %v\n", *(message.GetSubject()))
-	}
+
+	dataSets := response.GetDatasets()
+	indent := ""
+	parseUntypedNode(dataSets, &indent)
 }
 
-func StrToPtr(s string) *string {
-	return &s
+func parseUntypedNode(node absser.UntypedNodeable, indent *string) {
+	emptyIndent := ""
+	switch value := node.(type) {
+	case *absser.UntypedObject:
+		fmt.Printf("%vFound object value: \n", *indent)
+		for key, val := range value.GetValue() {
+			fmt.Printf("%vProperty Name: %v \n", *indent, key)
+			emptyIndent = *indent + "  "
+			parseUntypedNode(val, &emptyIndent)
+		}
+	case *absser.UntypedArray:
+		fmt.Printf("%vFound array value: \n", *indent)
+		for _, item := range value.GetValue() {
+			fmt.Printf("%vNew Item: \n", *indent)
+			emptyIndent = *indent + "  "
+			parseUntypedNode(item, &emptyIndent)
+		}
+	case *absser.UntypedBoolean:
+		fmt.Printf("%vFound bool value: %v \n", *indent, *value.GetValue())
+	case *absser.UntypedFloat:
+		fmt.Printf("%vFound float value: %v \n", *indent, *value.GetValue())
+	case *absser.UntypedDouble:
+		fmt.Printf("%vFound double value: %v \n", *indent, *value.GetValue())
+	case *absser.UntypedInteger:
+		fmt.Printf("%vFound int value: %v \n", *indent, *value.GetValue())
+	case *absser.UntypedLong:
+		fmt.Printf("%vFound long value: %v \n", *indent, *value.GetValue())
+	case *absser.UntypedNull:
+		fmt.Printf("%vFound null value: %v \n", *indent, value.GetValue())
+	case *absser.UntypedString:
+		fmt.Printf("%vFound string value: %v \n", *indent, *value.GetValue())
+	}
 }

@@ -8,7 +8,7 @@ import (
 type WithProviderItemRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ByApiJsonId gets an item from the github.com/andrueastman/UntypedNodeSamples/GoClient/.specs.item.item collection
+// ByApiJsonId gets an item from the github.com/andrueastman/UntypedNodeSamples/GoClient/GoClient.specs.item.item collection
 // returns a *ItemApiJsonItemRequestBuilder when successful
 func (m *WithProviderItemRequestBuilder) ByApiJsonId(apiJsonId string)(*ItemApiJsonItemRequestBuilder) {
     urlTplParams := make(map[string]string)

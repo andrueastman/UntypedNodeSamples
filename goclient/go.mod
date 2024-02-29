@@ -9,7 +9,7 @@ require (
 	github.com/microsoft/kiota-http-go v1.3.2
 	github.com/microsoft/kiota-samples/msgraph-mail/go v0.0.0-20240229005522-bd0a14704745
 	github.com/microsoft/kiota-serialization-form-go v1.0.0
-	github.com/microsoft/kiota-serialization-json-go v1.0.6
+	github.com/microsoft/kiota-serialization-json-go v1.0.7-0.20240214174353-4c901346fb5b
 	github.com/microsoft/kiota-serialization-multipart-go v1.0.0
 	github.com/microsoft/kiota-serialization-text-go v1.0.0
 )

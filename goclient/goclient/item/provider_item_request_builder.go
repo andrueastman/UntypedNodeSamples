@@ -3,7 +3,7 @@ package item
 import (
     "context"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-    iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2 "github.com/andrueastman/untypednodesamples/goclient/models"
+    id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629 "github.com/andrueastman/untypednodesamples/goclient/goclient/models"
 )
 
 // ProviderItemRequestBuilder builds and executes requests for operations under \{provider-id}
@@ -32,19 +32,19 @@ func NewProviderItemRequestBuilder(rawUrl string, requestAdapter i2ae4187f7daee2
 }
 // Get list all APIs in the directory for a particular providerNameReturns links to the individual API entry for each API.
 // returns a APIsable when successful
-func (m *ProviderItemRequestBuilder) Get(ctx context.Context, requestConfiguration *ProviderItemRequestBuilderGetRequestConfiguration)(iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2.APIsable, error) {
+func (m *ProviderItemRequestBuilder) Get(ctx context.Context, requestConfiguration *ProviderItemRequestBuilderGetRequestConfiguration)(id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629.APIsable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
         return nil, err
     }
-    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2.CreateAPIsFromDiscriminatorValue, nil)
+    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629.CreateAPIsFromDiscriminatorValue, nil)
     if err != nil {
         return nil, err
     }
     if res == nil {
         return nil, nil
     }
-    return res.(iae9fb0262d34e3cd98c53508ace559228b424528fd79025950263229053f76e2.APIsable), nil
+    return res.(id6760cbde1c5ad1214c40ac9ca069164ef0f31f8ecb790d183bca1f74a71e629.APIsable), nil
 }
 // ServicesJson the servicesJson property
 // returns a *ServicesJsonRequestBuilder when successful
