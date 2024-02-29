@@ -15,6 +15,7 @@ dependencies {
     implementation("jakarta.annotation:jakarta.annotation-api:2.1.1")
     implementation(project(":utilities"))
     implementation(project(":components:abstractions"))
+    implementation(project(":components:http"))
     implementation(project(":components:serialization:json"))
     implementation(project(":components:serialization:text"))
     implementation(project(":components:serialization:form"))

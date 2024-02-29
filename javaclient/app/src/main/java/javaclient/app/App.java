@@ -3,19 +3,45 @@
  */
 package javaclient.app;
 
-import javaclient.list.LinkedList;
-
-import static javaclient.utilities.StringUtils.join;
-import static javaclient.utilities.StringUtils.split;
-import static javaclient.app.MessageUtils.getMessage;
-
-import org.apache.commons.text.WordUtils;
+import com.microsoft.kiota.authentication.AnonymousAuthenticationProvider;
+import com.microsoft.kiota.http.OkHttpRequestAdapter;
+import com.microsoft.kiota.serialization.UntypedArray;
+import com.microsoft.kiota.serialization.UntypedNode;
+import com.microsoft.kiota.serialization.UntypedObject;
 
 public class App {
     public static void main(String[] args) {
-        LinkedList tokens;
-        tokens = split(getMessage());
-        String result = join(tokens);
-        System.out.println(WordUtils.capitalize(result));
+        var authProvider = new AnonymousAuthenticationProvider();
+        var requestAdapter = new OkHttpRequestAdapter(authProvider);
+        var apiClient = new javaclient.client.ApiClient(requestAdapter);
+        var response = apiClient.metricsJson().get();
+
+        parseUntypedNode(response.getDatasets());
+    }
+
+    public static void parseUntypedNode(UntypedNode node) {
+        parseUntypedNode(node, "");
+    }
+
+    public static void parseUntypedNode(UntypedNode node, String indent) {
+        switch (node) {
+            case UntypedArray array -> {
+                System.out.println(indent + "Found array value");
+                for(var item: array.getValue()){
+                    System.out.println(indent + "New Item");
+                    parseUntypedNode(item, indent + "  ");
+                }
+            }
+            case UntypedObject object -> {
+                System.out.println(indent + "Found object value");
+                for(var item: object.getValue().entrySet()){
+                    System.out.println(indent + "Property name: " + item.getKey());
+                    parseUntypedNode(item.getValue(), indent + "  ");
+                }
+            }
+            default -> {
+                 System.out.println(indent + "Found scalar value: " + node.getValue());
+            }
+        };
     }
 }
