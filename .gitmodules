@@ -16,3 +16,6 @@
 [submodule "DotnetUntypedNodeSample/kiota-http-dotnet"]
 	path = DotnetUntypedNodeSample/kiota-http-dotnet
 	url = https://github.com/microsoft/kiota-http-dotnet.git
+[submodule "javaclient/kiota-java"]
+	path = javaclient/kiota-java
+	url = https://github.com/microsoft/kiota-java.git
