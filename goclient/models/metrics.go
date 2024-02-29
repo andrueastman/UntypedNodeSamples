@@ -7,7 +7,7 @@ import (
 // Metrics list of basic metrics
 type Metrics struct {
     // Data used for charting etc
-    datasets *UntypedNode
+    datasets *i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.UntypedNode
     // Percentage of all APIs where auto fixes have been applied
     fixedPct *int32
     // Total number of fixes applied across all APIs
@@ -48,7 +48,7 @@ func CreateMetricsFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f48
 }
 // GetDatasets gets the datasets property value. Data used for charting etc
 // returns a *UntypedNode when successful
-func (m *Metrics) GetDatasets()(*UntypedNode) {
+func (m *Metrics) GetDatasets()(*i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.UntypedNode) {
     return m.datasets
 }
 // GetFieldDeserializers the deserialization information for the current model
@@ -56,12 +56,12 @@ func (m *Metrics) GetDatasets()(*UntypedNode) {
 func (m *Metrics) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     res := make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
     res["datasets"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-        val, err := n.GetObjectValue(CreateUntypedNodeFromDiscriminatorValue)
+        val, err := n.GetObjectValue(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.CreateUntypedNodeFromDiscriminatorValue)
         if err != nil {
             return err
         }
         if val != nil {
-            m.SetDatasets(val)
+            m.SetDatasets(val.(*i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.UntypedNode))
         }
         return nil
     }
@@ -265,7 +265,7 @@ func (m *Metrics) GetUnreachable()(*int32) {
 // Serialize serializes information the current object
 func (m *Metrics) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     {
-        err := writer.WriteUntypedNodeValue("datasets", m.GetDatasets())
+        err := writer.WriteObjectValue("datasets", m.GetDatasets())
         if err != nil {
             return err
         }
@@ -351,7 +351,7 @@ func (m *Metrics) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010
     return nil
 }
 // SetDatasets sets the datasets property value. Data used for charting etc
-func (m *Metrics) SetDatasets(value *UntypedNode)() {
+func (m *Metrics) SetDatasets(value *i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.UntypedNode)() {
     m.datasets = value
 }
 // SetFixedPct sets the fixedPct property value. Percentage of all APIs where auto fixes have been applied
@@ -408,7 +408,7 @@ func (m *Metrics) SetUnreachable(value *int32)() {
 }
 type Metricsable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-    GetDatasets()(*UntypedNode)
+    GetDatasets()(*i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.UntypedNode)
     GetFixedPct()(*int32)
     GetFixes()(*int32)
     GetInvalid()(*int32)
@@ -422,7 +422,7 @@ type Metricsable interface {
     GetThisWeek()(Metrics_thisWeekable)
     GetUnofficial()(*int32)
     GetUnreachable()(*int32)
-    SetDatasets(value *UntypedNode)()
+    SetDatasets(value *i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.UntypedNode)()
     SetFixedPct(value *int32)()
     SetFixes(value *int32)()
     SetInvalid(value *int32)()

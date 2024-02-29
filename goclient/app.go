@@ -1,4 +1,4 @@
-package main
+package goclient
 
 import (
 	"context"
@@ -7,6 +7,7 @@ import (
 	azidentity "github.com/Azure/azure-sdk-for-go/sdk/azidentity"
 	a "github.com/microsoft/kiota-authentication-azure-go"
 	r "github.com/microsoft/kiota-http-go"
+	u "github.com/microsoft/kiota-samples/msgraph-mail/go/utilities"
 )
 
 func main() {
