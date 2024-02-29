@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/components" />
+            <option value="$PROJECT_DIR$/components/serialization" />
+            <option value="$PROJECT_DIR$/kiota-java/components/abstractions" />
+            <option value="$PROJECT_DIR$/kiota-java/components/http" />
+            <option value="$PROJECT_DIR$/kiota-java/components/serialization/form" />
+            <option value="$PROJECT_DIR$/kiota-java/components/serialization/json" />
+            <option value="$PROJECT_DIR$/kiota-java/components/serialization/multipart" />
+            <option value="$PROJECT_DIR$/kiota-java/components/serialization/text" />
+            <option value="$PROJECT_DIR$/list" />
+            <option value="$PROJECT_DIR$/utilities" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
