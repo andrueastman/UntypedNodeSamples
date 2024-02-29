@@ -1,0 +1,23 @@
+Debug: KiotaBuilder kiota version 1.12.0
+Debug: KiotaBuilder cache file C:\Users\anomondi\AppData\Local\Temp\kiota\cache\generation\762C16CD3C2A91C1F851778C3D0CD4B6CCAED0F3821C5520806D251AC1EEFB2A\openapi.yaml is out of date, downloading from https://raw.githubusercontent.com/APIs-guru/openapi-directory/gh-pages/v2/openapi.yaml
+Debug: KiotaBuilder cache file C:\Users\anomondi\AppData\Local\Temp\kiota\cache\generation\762C16CD3C2A91C1F851778C3D0CD4B6CCAED0F3821C5520806D251AC1EEFB2A\openapi.yaml not found, downloading from https://raw.githubusercontent.com/APIs-guru/openapi-directory/gh-pages/v2/openapi.yaml
+Debug: KiotaBuilder step 1 - reading the stream - took 00:00:00.2485113
+Warning: KiotaBuilder OpenAPI warning: #/components/schemas/ApiVersion/properties/swaggerUrl - The format url is not supported by Kiota for the type string and the string type will be used.
+Warning: KiotaBuilder OpenAPI warning: #/components/schemas/ApiVersion/properties/swaggerYamlUrl - The format url is not supported by Kiota for the type string and the string type will be used.
+Warning: KiotaBuilder OpenAPI warning: #/components/schemas/ApiVersion/properties/link - The format url is not supported by Kiota for the type string and the string type will be used.
+Debug: KiotaBuilder step 2 - parsing the document - took 00:00:00.2012904
+Debug: KiotaBuilder step 3 - updating generation configuration from kiota extension - took 00:00:00.0002635
+Debug: KiotaBuilder step 4 - checking whether the output should be updated - took 00:00:00.0246947
+Debug: KiotaBuilder step 5 - filtering API paths with patterns - took 00:00:00.0116158
+Debug: KiotaBuilder step 6 - create uri space - took 00:00:00.0169834
+Debug: KiotaBuilder InitializeInheritanceIndex 00:00:00.0050939
+Debug: KiotaBuilder CreateRequestBuilderClass 00:00:00
+Debug: KiotaBuilder MapTypeDefinitions 00:00:00.0102777
+Debug: KiotaBuilder TrimInheritedModels 00:00:00
+Debug: KiotaBuilder CleanUpInternalState 00:00:00
+Debug: KiotaBuilder step 7 - create source model - took 00:00:00.1336548
+Debug: KiotaBuilder 48ms: Language refinement applied
+Debug: KiotaBuilder step 8 - refine by language - took 00:00:00.0518961
+Debug: KiotaBuilder step 9 - writing files - took 00:00:00.1245107
+Debug: KiotaBuilder step 10 - writing lock file - took 00:00:00.0141807
+Debug: KiotaBuilder Api manifest path: C:\Users\anomondi\source\repos\kiota\src\kiota\apimanifest.json
