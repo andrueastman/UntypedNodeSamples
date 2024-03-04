@@ -1,0 +1,34 @@
+{
+  "name": "untyped-nodes-sample",
+  "description": "Sample Project",
+  "version": "0.0.1-preview",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "npx ts-node index.ts"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.8",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@azure/identity": "^4.0.1",
+    "@microsoft/kiota-abstractions": ".\\kiota-typescript\\packages\\abstractions\\src\\",
+    "@microsoft/kiota-authentication-azure": ".\\kiota-typescript\\packages\\authentication\\azure\\src\\",
+    "@microsoft/kiota-http-fetchlibrary": ".\\kiota-typescript\\packages\\http\\fetch\\src\\",
+    "@microsoft/kiota-serialization-form": ".\\kiota-typescript\\packages\\serialization\\form\\src\\",
+    "@microsoft/kiota-serialization-json": ".\\kiota-typescript\\packages\\serialization\\json\\src\\",
+    "@microsoft/kiota-serialization-multipart": ".\\kiota-typescript\\packages\\serialization\\multipart\\src\\",
+    "@microsoft/kiota-serialization-text": ".\\kiota-typescript\\packages\\serialization\\text\\src\\",
+    "@opentelemetry/api": "^1.8.0",
+    "@std-uritemplate/std-uritemplate": "^0.0.54",
+    "guid-typescript": "^1.0.9",
+    "opentelemetry": "^0.1.0",
+    "tinyduration": "^3.3.0",
+    "ts-node": "^10.9.2",
+    "uuid": "^9.0.1"
+  },
+  "files": [
+    "lib/"
+  ]
+}

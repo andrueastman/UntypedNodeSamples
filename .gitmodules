@@ -19,3 +19,6 @@
 [submodule "javaclient/kiota-java"]
 	path = javaclient/kiota-java
 	url = https://github.com/microsoft/kiota-java.git
+[submodule "TSclient/kiota-typescript"]
+	path = TSclient/kiota-typescript
+	url = https://github.com/microsoft/kiota-typescript.git
