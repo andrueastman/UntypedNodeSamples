@@ -1,6 +1,6 @@
 import { FetchRequestAdapter } from "@microsoft/kiota-http-fetchlibrary";
 import { createApiClient } from "./apiClient";
-import { AnonymousAuthenticationProvider, UntypedNode } from "@microsoft/kiota-abstractions";
+import { AnonymousAuthenticationProvider, UntypedNode, isUntypedArray, isUntypedObject } from "@microsoft/kiota-abstractions";
 
 
 // API requires no authentication, so use the anonymous
@@ -24,6 +24,29 @@ async function main(): Promise<void> {
     }
 }
 
-function parseUntypedJson(dataSets: UntypedNode) {
-    console.log("dataSets");
+function parseUntypedJson(dataSets: UntypedNode | undefined, indent: string = "") {
+    if(dataSets === undefined) {
+        return;
+    }
+
+    if(isUntypedArray(dataSets)) {
+        console.log(indent+ "Found array type: ");
+        for(const dataSet of dataSets.getValue()) {
+            parseUntypedJson(dataSet, indent + "  ");
+        }
+    }
+    else if (isUntypedObject(dataSets)) {
+        const properties = dataSets.getValue();
+        console.log(indent + "Found object type: ");
+        for (const [key,value] of Object.entries(properties)) {
+            console.log(indent + "Found property with name: " + key);
+            parseUntypedJson(value, indent + "  ");
+        }
+    }
+    else {
+        console.log(indent + "Found scalar value: " + dataSets.getValue());
+    }
 }
+
+// run it!
+main()
