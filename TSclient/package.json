@@ -21,7 +21,7 @@
     "@microsoft/kiota-serialization-multipart": ".\\kiota-typescript\\packages\\serialization\\multipart\\src\\",
     "@microsoft/kiota-serialization-text": ".\\kiota-typescript\\packages\\serialization\\text\\src\\",
     "@opentelemetry/api": "^1.8.0",
-    "@std-uritemplate/std-uritemplate": "^0.0.54",
+    "@std-uritemplate/std-uritemplate": "^0.0.55",
     "guid-typescript": "^1.0.9",
     "opentelemetry": "^0.1.0",
     "tinyduration": "^3.3.0",
